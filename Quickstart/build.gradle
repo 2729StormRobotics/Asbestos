@@ -9,13 +9,22 @@ frc {
     team = "2729"
     robotClass = "robot.Robot"
 }
+wpi {
+    wpilibVersion = "+"                   // The WPILib version to use. For this version of GradleRIO, must be a 2017 version
+    ntcoreVersion = "+"                   // The NetworkTables Core version to use.
+    opencvVersion = "+"                   // The OpenCV version to use
+    cscoreVersion = "+"                   // The CSCore version to use
+
+    talonSrxVersion = "+"                 // The CTRE Toolsuite (Talon SRX) version to use.
+    navxVersion = "+"                     // The NavX Library version to use.
+}
 
 dependencies {
     compile wpilib()
     compile talonSrx()
     compile navx()
 
-    compile fileTree(dir: 'libs', include: '**/*.jar')
+    compile fileTree(dir: 'libs', include: '*.jar')
     nativeLib  fileTree(dir: 'libs', include: '**/*.so')
 
 }
