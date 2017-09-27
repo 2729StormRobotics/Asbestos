@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="gradle-wrapper">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/Quickstart/gradle/wrapper/gradle-wrapper.jar!/" />
+      <root url="jar://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
