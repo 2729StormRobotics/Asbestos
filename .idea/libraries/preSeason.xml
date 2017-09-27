@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="preSeason">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/build/libs/preSeason.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
