@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2d73d8d5-91c2-44a6-b004-9aa504529f7b" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/frc2729/robot/MotionProf1.java" afterPath="$PROJECT_DIR$/src/java/main/robot/MotionProf1.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/frc2729/robot/Path1.java" afterPath="$PROJECT_DIR$/src/java/main/robot/Path1.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/frc2729/robot/Robot.java" afterPath="$PROJECT_DIR$/src/java/main/robot/Robot.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/frc2729/robot/RobotMap.java" afterPath="$PROJECT_DIR$/src/java/main/robot/RobotMap.java" />
+    <list default="true" id="dda85372-0ee7-41fe-8516-6d9f31072089" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/gradle_wrapper.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/.gradle/" />
+    <ignored path="$PROJECT_DIR$/build/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,20 +18,15 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file leaf-file-name="Path1.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/main/robot/Path1.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="29" lean-forward="false" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="gradlew" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Quickstart/gradlew">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -40,18 +38,8 @@
       <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Quickstart/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="16" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="gradlew.bat" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Quickstart/gradlew.bat">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="255">
+              <caret line="17" column="33" lean-forward="false" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -61,8 +49,10 @@
         <entry file="file://$PROJECT_DIR$/src/java/main/robot/MotionProf1.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
-              <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-              <folding />
+              <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -70,9 +60,11 @@
       <file leaf-file-name="Robot.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/main/robot/Robot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="26" column="24" lean-forward="false" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
-              <folding />
+            <state relative-caret-position="-452">
+              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -80,8 +72,8 @@
       <file leaf-file-name="RobotMap.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/main/robot/RobotMap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -93,23 +85,214 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
+    <option name="myGradleHomes">
+      <map>
+        <entry key="$PROJECT_DIR$" value="/usr/local/Cellar/gradle/4.2/libexec" />
+      </map>
+    </option>
+    <option name="myGradleVersions">
+      <map>
+        <entry key="$PROJECT_DIR$" value="4.2" />
+      </map>
+    </option>
+    <option name="availableProjects">
+      <map>
+        <entry>
+          <key>
+            <ExternalProjectPojo>
+              <option name="name" value="preSeason" />
+              <option name="path" value="$PROJECT_DIR$" />
+            </ExternalProjectPojo>
+          </key>
+          <value>
+            <list>
+              <ExternalProjectPojo>
+                <option name="name" value="preSeason" />
+                <option name="path" value="$PROJECT_DIR$" />
+              </ExternalProjectPojo>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="availableTasks">
+      <map>
+        <entry key="$PROJECT_DIR$">
+          <value>
+            <list>
+              <ExternalTaskPojo>
+                <option name="description" value="Initializes a new Gradle build." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="init" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the components produced by root project 'preSeason'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="components" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the sub-projects of root project 'preSeason'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="projects" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the dependent components of components in root project 'preSeason'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="dependentComponents" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays all buildscript dependencies declared in root project 'preSeason'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="buildEnvironment" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the insight into a specific dependency in root project 'preSeason'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="dependencyInsight" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates Gradle wrapper files." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="wrapper" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays all dependencies declared in root project 'preSeason'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="dependencies" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays a help message." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="help" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the configuration model of root project 'preSeason'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="model" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the properties of root project 'preSeason'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="properties" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the tasks runnable from root project 'preSeason'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="tasks" />
+              </ExternalTaskPojo>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="modificationStamps">
+      <map>
+        <entry key="$PROJECT_DIR$" value="0" />
+      </map>
+    </option>
+    <option name="projectBuildClasspath">
+      <map>
+        <entry key="$PROJECT_DIR$">
+          <value>
+            <ExternalProjectBuildClasspathPojo>
+              <option name="modulesBuildClasspath">
+                <map>
+                  <entry key="$PROJECT_DIR$">
+                    <value>
+                      <ExternalModuleBuildClasspathPojo>
+                        <option name="path" value="$PROJECT_DIR$" />
+                      </ExternalModuleBuildClasspathPojo>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="name" value="preSeason" />
+              <option name="projectBuildClasspath">
+                <list>
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/ant-1.9.6.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/ant-launcher-1.9.6.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/gradle-base-services-4.2.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/gradle-base-services-groovy-4.2.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/gradle-build-cache-4.2.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/gradle-cli-4.2.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/gradle-core-4.2.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/gradle-core-api-4.2.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/gradle-docs-4.2.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/gradle-installation-beacon-4.2.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/gradle-jvm-services-4.2.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/gradle-kotlin-dsl-0.11.1.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/gradle-kotlin-dsl-tooling-builders-0.11.1.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/gradle-kotlin-dsl-tooling-models-0.11.1.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/gradle-launcher-4.2.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/gradle-logging-4.2.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/gradle-messaging-4.2.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/gradle-model-core-4.2.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/gradle-model-groovy-4.2.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/gradle-native-4.2.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/gradle-persistent-cache-4.2.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/gradle-process-services-4.2.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/gradle-resources-4.2.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/gradle-runtime-api-info-4.2.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/gradle-tooling-api-4.2.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/gradle-wrapper-4.2.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/groovy-all-2.4.11.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/plugins/gradle-announce-4.2.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/plugins/gradle-antlr-4.2.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/plugins/gradle-build-cache-http-4.2.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/plugins/gradle-build-comparison-4.2.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/plugins/gradle-build-init-4.2.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/plugins/gradle-code-quality-4.2.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/plugins/gradle-composite-builds-4.2.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/plugins/gradle-dependency-management-4.2.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/plugins/gradle-diagnostics-4.2.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/plugins/gradle-ear-4.2.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/plugins/gradle-ide-4.2.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/plugins/gradle-ide-native-4.2.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/plugins/gradle-ide-play-4.2.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/plugins/gradle-ivy-4.2.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/plugins/gradle-jacoco-4.2.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/plugins/gradle-javascript-4.2.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/plugins/gradle-language-groovy-4.2.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/plugins/gradle-language-java-4.2.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/plugins/gradle-language-jvm-4.2.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/plugins/gradle-language-native-4.2.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/plugins/gradle-language-scala-4.2.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/plugins/gradle-maven-4.2.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/plugins/gradle-osgi-4.2.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/plugins/gradle-platform-base-4.2.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/plugins/gradle-platform-jvm-4.2.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/plugins/gradle-platform-native-4.2.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/plugins/gradle-platform-play-4.2.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/plugins/gradle-plugin-development-4.2.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/plugins/gradle-plugin-use-4.2.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/plugins/gradle-plugins-4.2.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/plugins/gradle-publish-4.2.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/plugins/gradle-reporting-4.2.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/plugins/gradle-resources-gcs-4.2.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/plugins/gradle-resources-http-4.2.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/plugins/gradle-resources-s3-4.2.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/plugins/gradle-resources-sftp-4.2.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/plugins/gradle-scala-4.2.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/plugins/gradle-signing-4.2.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/plugins/gradle-test-kit-4.2.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/plugins/gradle-testing-base-4.2.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/plugins/gradle-testing-jvm-4.2.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/plugins/gradle-testing-native-4.2.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/plugins/gradle-tooling-api-builders-4.2.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/plugins/gradle-workers-4.2.jar" />
+                  <option value="/usr/local/Cellar/gradle/4.2/libexec/lib/plugins/ivy-2.2.0.jar" />
+                  <option value="$PROJECT_DIR$/buildSrc/src/main/java" />
+                  <option value="$PROJECT_DIR$/buildSrc/src/main/groovy" />
+                </list>
+              </option>
+            </ExternalProjectBuildClasspathPojo>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="externalProjectsViewState">
       <projects_view />
     </option>
-  </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/java/main/robot/RobotMap.java" />
-        <option value="$PROJECT_DIR$/Quickstart/build.gradle" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="20" />
-    <option name="y" value="43" />
-    <option name="width" value="1400" />
-    <option name="height" value="766" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -126,47 +309,51 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="preSeason" type="b2602c69:ProjectViewProjectNode" />
-              <item name="preSeason" type="462c0819:PsiDirectoryNode" />
+              <item name="preSeason" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
               <item name="preSeason" type="b2602c69:ProjectViewProjectNode" />
-              <item name="preSeason" type="462c0819:PsiDirectoryNode" />
+              <item name="preSeason" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="Quickstart" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="preSeason" type="b2602c69:ProjectViewProjectNode" />
-              <item name="preSeason" type="462c0819:PsiDirectoryNode" />
+              <item name="preSeason" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="preSeason" type="b2602c69:ProjectViewProjectNode" />
-              <item name="preSeason" type="462c0819:PsiDirectoryNode" />
+              <item name="preSeason" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="preSeason" type="b2602c69:ProjectViewProjectNode" />
+              <item name="preSeason" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="preSeason" type="b2602c69:ProjectViewProjectNode" />
-              <item name="preSeason" type="462c0819:PsiDirectoryNode" />
+              <item name="preSeason" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="robot" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="preSeason" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="RunDashboard">
@@ -181,9 +368,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Groovy.build">
+  <component name="RunManager">
     <configuration default="true" type="Applet" factoryName="Applet">
-      <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
@@ -263,30 +449,17 @@
       <properties />
       <listeners />
     </configuration>
-    <configuration name="build" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
-      <module name="preSeason" />
-      <setting name="path" value="file://$PROJECT_DIR$/Quickstart/build.gradle" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workDir" value="file://$PROJECT_DIR$/Quickstart" />
-      <setting name="debug" value="false" />
-    </configuration>
-    <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Groovy.build" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="2d73d8d5-91c2-44a6-b004-9aa504529f7b" name="Default" comment="" />
-      <created>1506474308853</created>
+      <changelist id="dda85372-0ee7-41fe-8516-6d9f31072089" name="Default" comment="" />
+      <created>1506475780793</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1506474308853</updated>
+      <updated>1506475780793</updated>
     </task>
     <servers />
   </component>
@@ -295,25 +468,25 @@
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3299712" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31214285" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -324,47 +497,17 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/java/main/robot/Path1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Quickstart/gradlew">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Quickstart/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/java/main/robot/MotionProf1.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/main/robot/Robot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="26" column="24" lean-forward="false" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Quickstart/gradlew.bat">
+    <entry file="file://$PROJECT_DIR$/src/java/main/robot/Path1.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -374,64 +517,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/main/robot/RobotMap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Quickstart/gradlew">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Quickstart/gradlew.bat">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/main/robot/RobotMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/main/robot/Robot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="26" column="24" lean-forward="false" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/main/robot/MotionProf1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/main/robot/Path1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="29" lean-forward="false" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
-          <folding />
+        <state relative-caret-position="-452">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Quickstart/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="16" selection-end-column="0" />
+        <state relative-caret-position="255">
+          <caret line="17" column="33" lean-forward="false" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
           <folding />
         </state>
       </provider>
