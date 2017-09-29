@@ -65,7 +65,8 @@ public class Robot extends IterativeRobot {
 
     @Override
     public void teleopPeriodic() {
-    	drive.tank(leftSpeed.read(), rightSpeed.read());
+
+		drive.tank(leftSpeed.read(), rightSpeed.read());
     }
 
     @Override

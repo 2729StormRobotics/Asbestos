@@ -1,5 +1,6 @@
 package java.main.robot;
 
+import jaci.pathfinder.modifiers.TankModifier;
 import org.strongback.command.Command;
 import org.strongback.drive.TankDrive;
 
@@ -25,6 +26,8 @@ public class Path1 extends Command {
 
 		Trajectory.Config config = new Trajectory.Config(Trajectory.FitMethod.HERMITE_CUBIC, Trajectory.Config.SAMPLES_HIGH, 0.05, 1.7, 2.0, 60.0);
 		Trajectory trajectory = Pathfinder.generate(points, config);
+
+        TankModifier modifier = new TankModifier(trajectory).modify(0.5);
 	}
 
 	@Override
