@@ -1,4 +1,4 @@
 Manifest-Version: 1.0
-Robot-Class: robot.Robot
+Robot-Class: src.java.main.robot.Robot
 Main-Class: edu.wpi.first.wpilibj.RobotBase
 
