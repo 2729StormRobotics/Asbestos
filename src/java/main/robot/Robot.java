@@ -2,29 +2,17 @@
 package java.main.robot;
 
 import org.strongback.Strongback;
-import org.strongback.command.Command;
-import org.strongback.components.Motor;
-import org.strongback.components.ui.ContinuousRange;
-import org.strongback.components.ui.Gamepad;
-import org.strongback.drive.TankDrive;
-import org.strongback.hardware.Hardware;
-
-import java.util.HashMap;
-import java.util.Map;
-import java.util.function.Supplier;
 
 
 import edu.wpi.first.wpilibj.IterativeRobot;
-import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 public class Robot extends IterativeRobot {
-/*
-	private TankDrive drive;
-	private ContinuousRange leftSpeed;
-	private ContinuousRange rightSpeed;
-	private SendableChooser autoChooser;
-	private static final Map<String,Supplier<Command>> AUTONOMOUS_SELECTION = new HashMap<>();
+
+//	private TankDrive drive;
+//	private ContinuousRange leftSpeed;
+//	private ContinuousRange rightSpeed;
+//	private SendableChooser autoChooser;
+//	private static final Map<String,Supplier<Command>> AUTONOMOUS_SELECTION = new HashMap<>();
 
 	
 	public static final class Auto{
@@ -33,7 +21,7 @@ public class Robot extends IterativeRobot {
 	
     @Override
     public void robotInit() {
-	    /*
+        /*
     	Motor leftMain = Hardware.Motors.talon(RobotMap.PORT_MOTOR_DRIVE_LEFT_MAIN);
     	Motor left2 = Hardware.Motors.talon(RobotMap.PORT_MOTOR_DRIVE_LEFT_2);
     	//Motor left3 = Hardware.Motors.talon(RobotMap.PORT_MOTOR_DRIVE_LEFT_3);
@@ -58,7 +46,7 @@ public class Robot extends IterativeRobot {
     	SmartDashboard.putData("Autonomous Modes", autoChooser);
     	AUTONOMOUS_SELECTION.clear();
     	AUTONOMOUS_SELECTION.put(Auto.MOTION_PROF_1, ()->new MotionProf1(drive));
-    	*/
+        */
     }
 
     @Override
@@ -70,7 +58,7 @@ public class Robot extends IterativeRobot {
     @Override
     public void teleopPeriodic() {
 
-		drive.tank(leftSpeed.read(), rightSpeed.read());
+		//drive.tank(leftSpeed.read(), rightSpeed.read());
     }
 
     @Override

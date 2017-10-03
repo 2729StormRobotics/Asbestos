@@ -7,7 +7,7 @@ plugins {
 
 frc {
     team = "2729"
-    robotClass = "src.java.main.robot.Robot"
+    robotClass = "robot.Robot"
     rioIP = "10.27.29.49"
     rioHost = "2729_Asbestos.local"
 }
@@ -15,6 +15,8 @@ apply plugin: 'idea'
 
 
 apply plugin: 'java'
+
+deploy.dependsOn "build"
 
 repositories {
     mavenCentral()
@@ -25,11 +27,11 @@ wpi {
 
     wpilibVersion = "+"                   // The WPILib version to use. For this version of GradleRIO, must be a 2017 version
     ntcoreVersion = "+"                   // The NetworkTables Core version to use.
-    opencvVersion = "+"                   // The OpenCV version to use
+    //opencvVersion = "+"                   // The OpenCV version to use
     cscoreVersion = "+"                   // The CSCore version to use
 
     talonSrxVersion = "+"                 // The CTRE Toolsuite (Talon SRX) version to use.
-    navxVersion = "+"                     // The NavX Library version to use.
+    //navxVersion = "+"                     // The NavX Library version to use.
 }
 
 dependencies {
