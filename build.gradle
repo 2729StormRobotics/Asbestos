@@ -40,7 +40,6 @@ dependencies {
     compile navx()
 
     compile fileTree(dir: 'libs', include: '*.jar')
-    nativeLib  fileTree(dir: 'libs', include: '**/*.so')
 
     compile group: 'org.hibernate', name: 'hibernate-core', version: '3.6.7.Final'
     testCompile group: 'junit', name: 'junit', version: '4.+'
