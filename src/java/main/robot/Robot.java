@@ -1,7 +1,7 @@
 /* Created Mon Sep 11 20:15:47 EDT 2017 */
 package java.main.robot;
 
-import org.strongback.Strongback;
+//import org.strongback.Strongback;
 
 
 import edu.wpi.first.wpilibj.IterativeRobot;
@@ -52,7 +52,7 @@ public class Robot extends IterativeRobot {
     @Override
     public void teleopInit() {
         // Start Strongback functions ...
-        Strongback.restart();
+        //Strongback.restart();
     }
 
     @Override
@@ -64,7 +64,7 @@ public class Robot extends IterativeRobot {
     @Override
     public void disabledInit() {
         // Tell Strongback that the robot is disabled so it can flush and kill commands.
-        Strongback.disable();
+        //Strongback.disable();
     }
 
 }
