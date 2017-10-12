@@ -27,11 +27,11 @@ wpi {
 
     wpilibVersion = "+"                   // The WPILib version to use. For this version of GradleRIO, must be a 2017 version
     ntcoreVersion = "+"                   // The NetworkTables Core version to use.
-    //opencvVersion = "+"                   // The OpenCV version to use
+    opencvVersion = "+"                   // The OpenCV version to use
     cscoreVersion = "+"                   // The CSCore version to use
 
     talonSrxVersion = "+"                 // The CTRE Toolsuite (Talon SRX) version to use.
-    //navxVersion = "+"                     // The NavX Library version to use.
+    navxVersion = "+"                     // The NavX Library version to use.
 }
 
 dependencies {
