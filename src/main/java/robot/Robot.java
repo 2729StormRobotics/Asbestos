@@ -1,9 +1,9 @@
 /* Created Mon Sep 11 20:15:47 EDT 2017 */
-package main.java.robot;
+package robot;
 
+import autoModes.MotionProf1;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import main.java.autoModes.MotionProf1;
 import org.strongback.Strongback;
 
 
