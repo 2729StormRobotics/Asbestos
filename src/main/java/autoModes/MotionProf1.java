@@ -1,4 +1,4 @@
-package main.java.autoModes;
+package autoModes;
 
 import org.strongback.command.CommandGroup;
 import org.strongback.drive.TankDrive;
