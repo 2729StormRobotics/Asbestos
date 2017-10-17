@@ -1,4 +1,4 @@
-package java.main.robot;
+package main.java.robot;
 
 public class RobotMap {
 	//Motors

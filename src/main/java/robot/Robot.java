@@ -1,8 +1,9 @@
 /* Created Mon Sep 11 20:15:47 EDT 2017 */
-package java.main.robot;
+package main.java.robot;
 
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+import main.java.autoModes.MotionProf1;
 import org.strongback.Strongback;
 
 
@@ -14,7 +15,6 @@ import org.strongback.components.ui.Gamepad;
 import org.strongback.drive.TankDrive;
 import org.strongback.hardware.Hardware;
 
-import java.main.autoModes.MotionProf1;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Supplier;

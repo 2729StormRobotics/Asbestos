@@ -1,4 +1,4 @@
-package java.main.autoModes;
+package main.java.autoModes;
 
 import jaci.pathfinder.modifiers.TankModifier;
 import org.strongback.command.Command;
