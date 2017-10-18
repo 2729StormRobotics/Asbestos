@@ -1,10 +1,10 @@
 <component name="libraryTable">
   <library name="libs">
     <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/strongback.jar!/" />
       <root url="jar://$PROJECT_DIR$/libs/CTRLib.jar!/" />
       <root url="jar://$PROJECT_DIR$/libs/navx_frc.jar!/" />
       <root url="jar://$PROJECT_DIR$/libs/Pathfinder-Java.jar!/" />
-      <root url="jar://$PROJECT_DIR$/libs/strongback.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
