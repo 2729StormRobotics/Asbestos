@@ -3,7 +3,7 @@ package robot;
 
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import main.java.autoModes.MotionProf1;
+import autoModes.MotionProf1;
 import org.strongback.Strongback;
 
 
