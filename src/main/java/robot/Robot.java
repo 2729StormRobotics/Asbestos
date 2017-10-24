@@ -1,19 +1,20 @@
 /* Created Mon Sep 11 20:15:47 EDT 2017 */
 package robot;
 
+import autoModes.MotionProf1;
+import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import autoModes.MotionProf1;
 import org.strongback.Strongback;
-
-
-import edu.wpi.first.wpilibj.IterativeRobot;
 import org.strongback.command.Command;
 import org.strongback.components.Motor;
 import org.strongback.components.ui.ContinuousRange;
 import org.strongback.components.ui.Gamepad;
 import org.strongback.drive.TankDrive;
 import org.strongback.hardware.Hardware;
+import com.ctre.MotorControl.*;
+import org.strongback.components.TalonSRX;
+
 
 import java.util.HashMap;
 import java.util.Map;
@@ -28,23 +29,24 @@ public class Robot extends IterativeRobot {
 	private static final Map<String,Supplier<Command>> AUTONOMOUS_SELECTION = new HashMap<>();
 
 
+	private static final CANTalon _leftMain = new CANTalon(RobotMap.PORT_MOTOR_DRIVE_LEFT_MAIN);
+	private static final CANTalon _left2 = new CANTalon(RobotMap.PORT_MOTOR_DRIVE_LEFT_2);
+
+	private static final CANTalon _rightMain = new CANTalon(RobotMap.PORT_MOTOR_DRIVE_RIGHT_MAIN);
+	private static final CANTalon _right2 = new CANTalon(RobotMap.PORT_MOTOR_DRIVE_RIGHT_2);
+
 	public static final class Auto{
 		public static final String MOTION_PROF_1 = "Motion Profile 1";
 	}
 
     @Override
     public void robotInit() {
-
-    	Motor leftMain = Hardware.Motors.talon(RobotMap.PORT_MOTOR_DRIVE_LEFT_MAIN);
-    	Motor left2 = Hardware.Motors.talon(RobotMap.PORT_MOTOR_DRIVE_LEFT_2);
-    	//Motor left3 = Hardware.Motors.talon(RobotMap.PORT_MOTOR_DRIVE_LEFT_3);
-    	//Motor left = Motor.compose(leftMain, left2, left3);
+    	Motor leftMain = Hardware.Motors.talonSRX(_leftMain);
+    	Motor left2 = Hardware.Motors.talonSRX(_left2);
 		Motor left = Motor.compose(leftMain, left2);
 
-    	Motor rightMain = Hardware.Motors.talon(RobotMap.PORT_MOTOR_DRIVE_RIGHT_MAIN);
-    	Motor right2 = Hardware.Motors.talon(RobotMap.PORT_MOTOR_DRIVE_RIGHT_2);
-    	//Motor right3 = Hardware.Motors.talon(RobotMap.PORT_MOTOR_DRIVE_RIGHT_3);
-    	//Motor right = Motor.compose(rightMain, right2, right3).invert();
+    	Motor rightMain = Hardware.Motors.talonSRX(_rightMain);
+    	Motor right2 = Hardware.Motors.talonSRX(_right2);
 		Motor right = Motor.compose(rightMain, right2);
 
     	Gamepad xboxDrive = Hardware.HumanInterfaceDevices.logitechDualAction(RobotMap.PORT_XBOX_DRIVE);
@@ -71,7 +73,14 @@ public class Robot extends IterativeRobot {
     @Override
     public void teleopPeriodic() {
 
+		Strongback.logger().warn("Left Speed: " + leftSpeed.read() + "          Right Speed: " + rightSpeed.read());
 		drive.tank(leftSpeed.read(), rightSpeed.read());
+		/*
+		_leftMain.set(0.5);
+		_left2.set(0.5);
+		_rightMain.set(0.5);
+		_right2.set(0.5);
+		*/
     }
 
     @Override
