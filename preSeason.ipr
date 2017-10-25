@@ -16,9 +16,7 @@
       <module name="preSeason_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
-  <component name="CopyrightManager" default="">
-    <module2copyright />
-  </component>
+  <component name="CopyrightManager" default="" />
   <component name="DependencyValidationManager">
     <option name="SKIP_IMPORT_STATEMENTS" value="false" />
   </component>
@@ -84,6 +82,13 @@
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
   </component>
   <component name="libraryTable">
+    <library name="CTRLib">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/libs/CTRLib.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
     <library name="Gradle: edu.wpi.cscore.java:cscore:arm:1.0.2">
       <CLASSES>
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/edu.wpi.cscore.java/cscore/1.0.2/d92666b7a2467a5a34d12277c41ebb569df9fb89/cscore-1.0.2-arm.jar!/" />

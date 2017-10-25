@@ -2,13 +2,13 @@
 package robot;
 
 import autoModes.MotionProf1;
+import com.ctre.CANTalon;
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import org.strongback.Strongback;
 import org.strongback.command.Command;
 import org.strongback.components.Motor;
-import org.strongback.components.TalonSRX;
 import org.strongback.components.ui.ContinuousRange;
 import org.strongback.components.ui.Gamepad;
 import org.strongback.drive.TankDrive;
@@ -26,13 +26,13 @@ public class Robot extends IterativeRobot {
 	private SendableChooser autoChooser;
 	private static final Map<String,Supplier<Command>> AUTONOMOUS_SELECTION = new HashMap<>();
 
-	/*
+
 	private static final CANTalon _leftMain = new CANTalon(RobotMap.PORT_MOTOR_DRIVE_LEFT_MAIN);
 	private static final CANTalon _left2 = new CANTalon(RobotMap.PORT_MOTOR_DRIVE_LEFT_2);
 
 	private static final CANTalon _rightMain = new CANTalon(RobotMap.PORT_MOTOR_DRIVE_RIGHT_MAIN);
 	private static final CANTalon _right2 = new CANTalon(RobotMap.PORT_MOTOR_DRIVE_RIGHT_2);
-	*/
+
 
 	public static final class Auto{
 		public static final String MOTION_PROF_1 = "Motion Profile 1";
@@ -40,12 +40,12 @@ public class Robot extends IterativeRobot {
 
     @Override
     public void robotInit() {
-    	TalonSRX leftMain = Hardware.Motors.talonSRX(RobotMap.PORT_MOTOR_DRIVE_LEFT_MAIN);
-    	TalonSRX left2 = Hardware.Motors.talonSRX(RobotMap.PORT_MOTOR_DRIVE_LEFT_2);
+    	Motor leftMain = Hardware.Motors.talonSRX(_leftMain);
+    	Motor left2 = Hardware.Motors.talonSRX(_left2);
 		Motor left = Motor.compose(leftMain, left2);
 
-    	TalonSRX rightMain = Hardware.Motors.talonSRX(RobotMap.PORT_MOTOR_DRIVE_RIGHT_MAIN);
-    	TalonSRX right2 = Hardware.Motors.talonSRX(RobotMap.PORT_MOTOR_DRIVE_RIGHT_2);
+    	Motor rightMain = Hardware.Motors.talonSRX(_rightMain);
+    	Motor right2 = Hardware.Motors.talonSRX(_right2);
 		Motor right = Motor.compose(rightMain, right2);
 
     	Gamepad xboxDrive = Hardware.HumanInterfaceDevices.logitechDualAction(RobotMap.PORT_XBOX_DRIVE);
