@@ -12,7 +12,8 @@ import org.strongback.components.Motor;
 import org.strongback.components.ui.ContinuousRange;
 import org.strongback.components.ui.Gamepad;
 import org.strongback.drive.TankDrive;
-import org.strongback.hardware.Hardware;
+// import org.strongback.hardware.Hardware;
+import org.strongback.hardware.*;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -46,9 +47,9 @@ public class Robot extends IterativeRobot {
 
     	Motor rightMain = Hardware.Motors.talonSRX(_rightMain);
     	Motor right2 = Hardware.Motors.talonSRX(_right2);
-		Motor right = Motor.compose(rightMain, right2);
+		Motor right = Motor.compose(rightMain, right2).invert();
 
-    	Gamepad xboxDrive = Hardware.HumanInterfaceDevices.logitechDualAction(RobotMap.PORT_XBOX_DRIVE);
+    	Gamepad xboxDrive = Hardware.HumanInterfaceDevices.xbox360(RobotMap.PORT_XBOX_DRIVE);
     	leftSpeed = xboxDrive.getLeftY();
     	rightSpeed = xboxDrive.getRightY();
 
