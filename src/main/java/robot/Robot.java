@@ -19,12 +19,15 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Supplier;
 
+import autoModes.MoveForward;
+
 public class Robot extends IterativeRobot {
 
 	private TankDrive drive;
 	private ContinuousRange leftSpeed;
 	private ContinuousRange rightSpeed;
 	private SendableChooser autoChooser;
+
 	private static final Map<String,Supplier<Command>> AUTONOMOUS_SELECTION = new HashMap<>();
 
 
@@ -37,6 +40,7 @@ public class Robot extends IterativeRobot {
 
 	public static final class Auto{
 		public static final String MOTION_PROF_1 = "Motion Profile 1";
+		public static final String MOVE_FORWARD = "Move Forward";
 	}
 
     @Override
@@ -61,7 +65,7 @@ public class Robot extends IterativeRobot {
     	SmartDashboard.putData("Autonomous Modes", autoChooser);
     	AUTONOMOUS_SELECTION.clear();
     	AUTONOMOUS_SELECTION.put(Auto.MOTION_PROF_1, ()->new MotionProf1(drive));
-
+        AUTONOMOUS_SELECTION.put(Auto.MOVE_FORWARD, () ->new MoveForward(drive));
     }
 
     @Override
@@ -75,6 +79,7 @@ public class Robot extends IterativeRobot {
 
 		Strongback.logger().warn("Left Speed: " + leftSpeed.read() + "          Right Speed: " + rightSpeed.read());
 		drive.tank(leftSpeed.read(), rightSpeed.read());
+
 		/*
 		_leftMain.set(0.5);
 		_left2.set(0.5);
