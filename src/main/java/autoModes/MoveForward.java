@@ -13,7 +13,7 @@ public class MoveForward extends Command{
 
     @Override
     public void initialize() {
-
+        //hi simmar hi buddy boy. how was your meme today?  8/8.  we improvised adapted and overcame
     }
 
     @Override

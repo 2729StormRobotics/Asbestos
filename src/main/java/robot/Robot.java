@@ -78,8 +78,8 @@ public class Robot extends IterativeRobot {
     public void teleopPeriodic() {
 
 		Strongback.logger().warn("Left Speed: " + leftSpeed.read() + "          Right Speed: " + rightSpeed.read());
-		drive.tank(leftSpeed.read(), rightSpeed.read());
-
+		//drive.tank(leftSpeed.read(), rightSpeed.read());
+        drive.tank(0.2, 0.2);
 		/*
 		_leftMain.set(0.5);
 		_left2.set(0.5);
