@@ -24,7 +24,8 @@ import autoModes.MoveForward;
 public class Robot extends IterativeRobot {
 
 	private TankDrive drive;
-	private ContinuousRange driveSpeed;
+	private ContinuousRange forwardSpeed;
+	private ContinuousRange reverseSpeed;
     private ContinuousRange turnSpeed;
 	private SendableChooser autoChooser;
 
@@ -55,7 +56,8 @@ public class Robot extends IterativeRobot {
 
     	Gamepad xboxDrive = Hardware.HumanInterfaceDevices.xbox360(RobotMap.PORT_XBOX_DRIVE);
 
-    	driveSpeed = xboxDrive.getRightTrigger();
+    	forwardSpeed = xboxDrive.getRightTrigger();
+		reverseSpeed = xboxDrive.getLeftTrigger();
         turnSpeed = xboxDrive.getRightX();
 
     	drive = new TankDrive(left, right);
@@ -80,7 +82,13 @@ public class Robot extends IterativeRobot {
     public void teleopPeriodic() {
 
 		//Strongback.logger().warn("Left Speed: " + leftSpeed.read() + "          Right Speed: " + rightSpeed.read());
-		drive.arcade(driveSpeed.read(), turnSpeed.read());
+		double combinedSpeed = forwardSpeed.read() - reverseSpeed.read();
+		int mult = -1;
+		if (combinedSpeed > 0)
+			mult = -1;
+		else
+			mult = 1;
+		drive.arcade(combinedSpeed, mult*turnSpeed.read(), true);
         //drive.tank(0.2, 0.2);
 		/*
 		_leftMain.set(0.5);
