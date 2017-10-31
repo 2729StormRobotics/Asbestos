@@ -24,8 +24,8 @@ import autoModes.MoveForward;
 public class Robot extends IterativeRobot {
 
 	private TankDrive drive;
-	private ContinuousRange leftSpeed;
-	private ContinuousRange rightSpeed;
+	private ContinuousRange driveSpeed;
+    private ContinuousRange turnSpeed;
 	private SendableChooser autoChooser;
 
 	private static final Map<String,Supplier<Command>> AUTONOMOUS_SELECTION = new HashMap<>();
@@ -54,14 +54,16 @@ public class Robot extends IterativeRobot {
 		Motor right = Motor.compose(rightMain, right2).invert();
 
     	Gamepad xboxDrive = Hardware.HumanInterfaceDevices.xbox360(RobotMap.PORT_XBOX_DRIVE);
-    	leftSpeed = xboxDrive.getLeftY();
-    	rightSpeed = xboxDrive.getRightY();
+
+    	driveSpeed = xboxDrive.getRightTrigger();
+        turnSpeed = xboxDrive.getRightX();
 
     	drive = new TankDrive(left, right);
 
 
     	autoChooser = new SendableChooser();
     	autoChooser.addDefault(Auto.MOTION_PROF_1, Auto.MOTION_PROF_1);
+    	autoChooser.addObject(Auto.MOTION_PROF_1, Auto.MOVE_FORWARD);
     	SmartDashboard.putData("Autonomous Modes", autoChooser);
     	AUTONOMOUS_SELECTION.clear();
     	AUTONOMOUS_SELECTION.put(Auto.MOTION_PROF_1, ()->new MotionProf1(drive));
@@ -77,9 +79,9 @@ public class Robot extends IterativeRobot {
     @Override
     public void teleopPeriodic() {
 
-		Strongback.logger().warn("Left Speed: " + leftSpeed.read() + "          Right Speed: " + rightSpeed.read());
-		//drive.tank(leftSpeed.read(), rightSpeed.read());
-        drive.tank(0.2, 0.2);
+		//Strongback.logger().warn("Left Speed: " + leftSpeed.read() + "          Right Speed: " + rightSpeed.read());
+		drive.arcade(driveSpeed.read(), turnSpeed.read());
+        //drive.tank(0.2, 0.2);
 		/*
 		_leftMain.set(0.5);
 		_left2.set(0.5);
