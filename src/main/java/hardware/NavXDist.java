@@ -1,4 +1,4 @@
-package robot;
+package hardware;
 
 import org.strongback.components.DistanceSensor;
 

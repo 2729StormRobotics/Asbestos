@@ -1,4 +1,4 @@
-package robot;
+package hardware;
 
 import org.strongback.components.*;
 
@@ -6,11 +6,11 @@ public class NavXGyro implements Gyroscope {
 
     @Override
     public double getRate() {
-        return 0;
+        return NavXManager.getNavX().getRate();
     }
 
     @Override
     public double getAngle() {
-        return 0;
+        return NavXManager.getNavX().getAngle();
     }
 }
