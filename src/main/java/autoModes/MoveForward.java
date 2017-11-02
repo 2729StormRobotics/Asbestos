@@ -1,5 +1,6 @@
 package autoModes;
 
+import org.strongback.Strongback;
 import org.strongback.command.Command;
 import org.strongback.drive.TankDrive;
 
@@ -18,6 +19,7 @@ public class MoveForward extends Command{
 
     @Override
     public boolean execute() {
+        Strongback.logger().warn("Moving Forward");
         drive.tank(.2, .2);
         return false;
     }

@@ -38,6 +38,7 @@ public class Robot extends IterativeRobot {
 	private static final CANTalon _rightMain = new CANTalon(RobotMap.PORT_MOTOR_DRIVE_RIGHT_MAIN);
 	private static final CANTalon _right2 = new CANTalon(RobotMap.PORT_MOTOR_DRIVE_RIGHT_2);
 
+	
 
 	public static final class Auto{
 		public static final String MOTION_PROF_1 = "Motion Profile 1";
@@ -64,9 +65,11 @@ public class Robot extends IterativeRobot {
 
 
     	autoChooser = new SendableChooser();
-    	autoChooser.addDefault(Auto.MOTION_PROF_1, Auto.MOTION_PROF_1);
-        autoChooser.addObject(Auto.MOTION_PROF_1, Auto.MOTION_PROF_1);
-    	autoChooser.addObject(Auto.MOTION_PROF_1, Auto.MOVE_FORWARD);
+        autoChooser.addDefault(Auto.MOTION_PROF_1, Auto.MOTION_PROF_1);
+    	autoChooser.addObject(Auto.MOTION_PROF_1, Auto.MOTION_PROF_1);
+        autoChooser.addObject(Auto.MOVE_FORWARD, Auto.MOVE_FORWARD);
+
+
     	SmartDashboard.putData("Autonomous Modes", autoChooser);
 
     	AUTONOMOUS_SELECTION.clear();
@@ -98,6 +101,24 @@ public class Robot extends IterativeRobot {
 		_rightMain.set(0.5);
 		_right2.set(0.5);
 		*/
+    }
+
+    @Override
+    public void autonomousInit() {
+        // Start Strongback functions ...
+        Strongback.restart();
+
+        // Figure out which autonomous command we will use ...
+        String selected = (String) autoChooser.getSelected();
+        Supplier<Command> commandSupplier = selected == null ? null : AUTONOMOUS_SELECTION.get(selected);
+        if ( commandSupplier == null ) commandSupplier = AUTONOMOUS_SELECTION.get(Auto.MOTION_PROF_1);
+        System.out.println("Running autonomous: " + selected);
+        Strongback.submit(commandSupplier.get());
+    }
+
+    @Override
+    public void autonomousPeriodic() {
+
     }
 
     @Override
