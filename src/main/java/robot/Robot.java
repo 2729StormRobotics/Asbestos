@@ -8,6 +8,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import org.strongback.Strongback;
 import org.strongback.command.Command;
+import org.strongback.components.Accelerometer;
 import org.strongback.components.Motor;
 import org.strongback.components.ui.ContinuousRange;
 import org.strongback.components.ui.Gamepad;
@@ -89,10 +90,10 @@ public class Robot extends IterativeRobot {
 		//Strongback.logger().warn("Left Speed: " + leftSpeed.read() + "          Right Speed: " + rightSpeed.read());
 		double combinedSpeed = forwardSpeed.read() - reverseSpeed.read();
 		int mult = -1;
-		if (combinedSpeed > 0)
-			mult = -1;
-		else
+		if (combinedSpeed < 0)
 			mult = 1;
+		else
+			mult = -1;
 		drive.arcade(combinedSpeed, mult*turnSpeed.read(), true);
         //drive.tank(0.2, 0.2);
 		/*
