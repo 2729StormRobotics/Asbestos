@@ -6,10 +6,13 @@ import com.ctre.CANTalon;
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+import hardware.NavXAccel;
 import org.strongback.Strongback;
 import org.strongback.command.Command;
 import org.strongback.components.Accelerometer;
 import org.strongback.components.Motor;
+import org.strongback.components.TalonSRX;
+import org.strongback.components.ThreeAxisAccelerometer;
 import org.strongback.components.ui.ContinuousRange;
 import org.strongback.components.ui.Gamepad;
 import org.strongback.drive.TankDrive;
@@ -30,6 +33,8 @@ public class Robot extends IterativeRobot {
     private ContinuousRange turnSpeed;
 	private SendableChooser autoChooser;
 
+	private ThreeAxisAccelerometer threeAccel = new NavXAccel();
+
 	private static final Map<String,Supplier<Command>> AUTONOMOUS_SELECTION = new HashMap<>();
 
 
@@ -48,12 +53,22 @@ public class Robot extends IterativeRobot {
 
     @Override
     public void robotInit() {
-    	Motor leftMain = Hardware.Motors.talonSRX(_leftMain);
-    	Motor left2 = Hardware.Motors.talonSRX(_left2);
+
+		_left2.changeControlMode(CANTalon.TalonControlMode.Follower);
+		_left2.set(_leftMain.getDeviceID());
+
+		_right2.changeControlMode(CANTalon.TalonControlMode.Follower);
+		_right2.set(_rightMain.getDeviceID());
+
+		TalonSRX leftMain = Hardware.Motors.talonSRX(_leftMain);
+
+
+		TalonSRX left2 = Hardware.Motors.talonSRX(_left2);
 		Motor left = Motor.compose(leftMain, left2);
 
-    	Motor rightMain = Hardware.Motors.talonSRX(_rightMain);
-    	Motor right2 = Hardware.Motors.talonSRX(_right2);
+    	TalonSRX rightMain = Hardware.Motors.talonSRX(_rightMain);
+		TalonSRX right2 = Hardware.Motors.talonSRX(_right2);
+		right2.invert();
 		Motor right = Motor.compose(rightMain, right2).invert();
 
     	Gamepad xboxDrive = Hardware.HumanInterfaceDevices.xbox360(RobotMap.PORT_XBOX_DRIVE);
@@ -74,7 +89,7 @@ public class Robot extends IterativeRobot {
     	SmartDashboard.putData("Autonomous Modes", autoChooser);
 
     	AUTONOMOUS_SELECTION.clear();
-    	AUTONOMOUS_SELECTION.put(Auto.MOTION_PROF_1, ()->new MotionProf1(drive));
+    	AUTONOMOUS_SELECTION.put(Auto.MOTION_PROF_1, ()->new MotionProf1(drive, left, right, threeAccel));
         AUTONOMOUS_SELECTION.put(Auto.MOVE_FORWARD, () ->new MoveForward(drive));
     }
 

@@ -1,8 +1,11 @@
 package autoModes;
 
+import jaci.pathfinder.followers.EncoderFollower;
 import jaci.pathfinder.modifiers.TankModifier;
 import org.strongback.command.Command;
+import org.strongback.components.ThreeAxisAccelerometer;
 import org.strongback.drive.TankDrive;
+import org.strongback.components.Motor;
 
 import jaci.pathfinder.Pathfinder;
 import jaci.pathfinder.Trajectory;
@@ -10,10 +13,15 @@ import jaci.pathfinder.Waypoint;
 
 public class Path1 extends Command {
     private TankDrive drive;
-    public Path1(TankDrive drive) {
+    private Motor left;
+    private Motor right;
+
+    public Path1(TankDrive drive, Motor left, Motor right, ThreeAxisAccelerometer threeAccel) {
         super(drive);
 
         this.drive = drive;
+        this.left = left;
+        this.right = right;
     }
 
     @Override
@@ -28,10 +36,23 @@ public class Path1 extends Command {
         Trajectory trajectory = Pathfinder.generate(points, config);
 
         TankModifier modifier = new TankModifier(trajectory).modify(0.5);
+
+        EncoderFollower leftEncoder = new EncoderFollower(modifier.getLeftTrajectory());
+        EncoderFollower rightEncoder = new EncoderFollower(modifier.getRightTrajectory());
+
+
+
+
+
+        left.configureEncoder(left.getEncoderPositon, 1000, wheel_diameter);
+
+
     }
 
     @Override
     public boolean execute() {
+
+
         // TODO Auto-generated method stub
         return false;
     }
