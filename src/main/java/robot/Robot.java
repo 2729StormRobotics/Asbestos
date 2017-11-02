@@ -65,8 +65,10 @@ public class Robot extends IterativeRobot {
 
     	autoChooser = new SendableChooser();
     	autoChooser.addDefault(Auto.MOTION_PROF_1, Auto.MOTION_PROF_1);
+        autoChooser.addObject(Auto.MOTION_PROF_1, Auto.MOTION_PROF_1);
     	autoChooser.addObject(Auto.MOTION_PROF_1, Auto.MOVE_FORWARD);
     	SmartDashboard.putData("Autonomous Modes", autoChooser);
+
     	AUTONOMOUS_SELECTION.clear();
     	AUTONOMOUS_SELECTION.put(Auto.MOTION_PROF_1, ()->new MotionProf1(drive));
         AUTONOMOUS_SELECTION.put(Auto.MOVE_FORWARD, () ->new MoveForward(drive));
