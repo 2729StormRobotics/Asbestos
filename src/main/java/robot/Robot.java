@@ -4,11 +4,15 @@ package robot;
 import autoModes.MotionProf1;
 import com.ctre.CANTalon;
 import edu.wpi.first.wpilibj.IterativeRobot;
+import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import hardware.NavXAccel;
+import jaci.pathfinder.Pathfinder;
+import jaci.pathfinder.Trajectory;
+import jaci.pathfinder.Waypoint;
+import jaci.pathfinder.modifiers.TankModifier;
 import org.strongback.Strongback;
-import org.strongback.command.Command;
 import org.strongback.components.Accelerometer;
 import org.strongback.components.Motor;
 import org.strongback.components.TalonSRX;
@@ -19,6 +23,7 @@ import org.strongback.drive.TankDrive;
 // import org.strongback.hardware.Hardware;
 import org.strongback.hardware.*;
 
+import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Supplier;
@@ -32,8 +37,6 @@ public class Robot extends IterativeRobot {
 	private ContinuousRange reverseSpeed;
     private ContinuousRange turnSpeed;
 	private SendableChooser autoChooser;
-
-	private ThreeAxisAccelerometer threeAccel = new NavXAccel();
 
 	private static final Map<String,Supplier<Command>> AUTONOMOUS_SELECTION = new HashMap<>();
 
@@ -60,16 +63,8 @@ public class Robot extends IterativeRobot {
 		_right2.changeControlMode(CANTalon.TalonControlMode.Follower);
 		_right2.set(_rightMain.getDeviceID());
 
-		TalonSRX leftMain = Hardware.Motors.talonSRX(_leftMain);
 
-
-		TalonSRX left2 = Hardware.Motors.talonSRX(_left2);
-		Motor left = Motor.compose(leftMain, left2);
-
-    	TalonSRX rightMain = Hardware.Motors.talonSRX(_rightMain);
-		TalonSRX right2 = Hardware.Motors.talonSRX(_right2);
-		right2.invert();
-		Motor right = Motor.compose(rightMain, right2).invert();
+		_rightMain.setInverted(true);
 
     	Gamepad xboxDrive = Hardware.HumanInterfaceDevices.xbox360(RobotMap.PORT_XBOX_DRIVE);
 
@@ -77,20 +72,29 @@ public class Robot extends IterativeRobot {
 		reverseSpeed = xboxDrive.getLeftTrigger();
         turnSpeed = xboxDrive.getRightX();
 
-    	drive = new TankDrive(left, right);
+    	//drive = new TankDrive(_leftMain, _rightMain);
 
 
-    	autoChooser = new SendableChooser();
-        autoChooser.addDefault(Auto.MOTION_PROF_1, Auto.MOTION_PROF_1);
-    	autoChooser.addObject(Auto.MOTION_PROF_1, Auto.MOTION_PROF_1);
-        autoChooser.addObject(Auto.MOVE_FORWARD, Auto.MOVE_FORWARD);
+    	autoChooser = new SendableChooser<>();
+        autoChooser.addDefault(Auto.MOTION_PROF_1, new MotionProf1(_leftMain, _rightMain));
+    	autoChooser.addObject(Auto.MOTION_PROF_1, new MotionProf1(_leftMain, _rightMain));
+        //autoChooser.addObject(Auto.MOVE_FORWARD, new MoveForward());
 
 
     	SmartDashboard.putData("Autonomous Modes", autoChooser);
 
-    	AUTONOMOUS_SELECTION.clear();
-    	AUTONOMOUS_SELECTION.put(Auto.MOTION_PROF_1, ()->new MotionProf1(drive, left, right, threeAccel));
-        AUTONOMOUS_SELECTION.put(Auto.MOVE_FORWARD, () ->new MoveForward(drive));
+        Waypoint[] points = new Waypoint[] {
+                new Waypoint(-4, -1, Pathfinder.d2r(-45)),      // Waypoint @ x=-4, y=-1, exit angle=-45 degrees
+                new Waypoint(-2, -2, 0),                        // Waypoint @ x=-2, y=-2, exit angle=0 radians
+                new Waypoint(0, 0, 0)                           // Waypoint @ x=0, y=0,   exit angle=0 radians
+        };
+
+        Trajectory.Config config = new Trajectory.Config(Trajectory.FitMethod.HERMITE_CUBIC, Trajectory.Config.SAMPLES_HIGH, 0.05, 1.7, 2.0, 60.0);
+        Trajectory trajectory = Pathfinder.generate(points, config);
+
+        TankModifier modifier = new TankModifier(trajectory).modify(0.5);
+        File myFile = new File("/home/lvuser/myfile.traj");
+        Pathfinder.writeToFile(myFile, trajectory);
     }
 
     @Override
@@ -101,6 +105,7 @@ public class Robot extends IterativeRobot {
 
     @Override
     public void teleopPeriodic() {
+        Strongback.restart();
 
 		//Strongback.logger().warn("Left Speed: " + leftSpeed.read() + "          Right Speed: " + rightSpeed.read());
 		double combinedSpeed = forwardSpeed.read() - reverseSpeed.read();
@@ -121,15 +126,13 @@ public class Robot extends IterativeRobot {
 
     @Override
     public void autonomousInit() {
-        // Start Strongback functions ...
         Strongback.restart();
 
-        // Figure out which autonomous command we will use ...
-        String selected = (String) autoChooser.getSelected();
-        Supplier<Command> commandSupplier = selected == null ? null : AUTONOMOUS_SELECTION.get(selected);
-        if ( commandSupplier == null ) commandSupplier = AUTONOMOUS_SELECTION.get(Auto.MOTION_PROF_1);
-        System.out.println("Running autonomous: " + selected);
-        Strongback.submit(commandSupplier.get());
+
+        Command autonomousCommand = (Command) autoChooser.getSelected();
+        if (autonomousCommand != null) {
+            autonomousCommand.start();
+        }
     }
 
     @Override
