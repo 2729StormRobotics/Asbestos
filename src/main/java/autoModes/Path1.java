@@ -6,7 +6,6 @@ import jaci.pathfinder.followers.EncoderFollower;
 import jaci.pathfinder.modifiers.TankModifier;
 import org.strongback.Strongback;
 import edu.wpi.first.wpilibj.command.Command;
-import org.strongback.drive.TankDrive;
 
 import jaci.pathfinder.Pathfinder;
 import jaci.pathfinder.Trajectory;
@@ -15,7 +14,6 @@ import jaci.pathfinder.Waypoint;
 import java.io.File;
 
 public class Path1 extends Command {
-    private TankDrive drive;
     private CANTalon left;
     private CANTalon right;
     private EncoderFollower leftEncoder;
@@ -24,11 +22,11 @@ public class Path1 extends Command {
     private double rightSpeed;
 
     public Path1(CANTalon left, CANTalon right) {
-
-        this.drive = drive;
+        Strongback.logger().warn("Path1 constructor");
         this.left = left;
         this.right = right;
         File myFile = new File("/home/lvuser/myfile.traj");
+        Strongback.logger().warn("File created");
         Trajectory trajectory = Pathfinder.readFromFile(myFile);
 
         TankModifier modifier = new TankModifier(trajectory).modify(0.5);
@@ -48,6 +46,7 @@ public class Path1 extends Command {
 
     @Override
     public void initialize() {
+        Strongback.logger().warn("initializing Path1");
 
 
     }

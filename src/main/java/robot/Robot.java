@@ -5,22 +5,17 @@ import autoModes.MotionProf1;
 import com.ctre.CANTalon;
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Command;
+import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import hardware.NavXAccel;
 import jaci.pathfinder.Pathfinder;
 import jaci.pathfinder.Trajectory;
 import jaci.pathfinder.Waypoint;
 import jaci.pathfinder.modifiers.TankModifier;
 import org.strongback.Strongback;
-import org.strongback.components.Accelerometer;
-import org.strongback.components.Motor;
-import org.strongback.components.TalonSRX;
-import org.strongback.components.ThreeAxisAccelerometer;
 import org.strongback.components.ui.ContinuousRange;
 import org.strongback.components.ui.Gamepad;
 import org.strongback.drive.TankDrive;
-// import org.strongback.hardware.Hardware;
 import org.strongback.hardware.*;
 
 import java.io.File;
@@ -32,7 +27,6 @@ import autoModes.MoveForward;
 
 public class Robot extends IterativeRobot {
 
-	private TankDrive drive;
 	private ContinuousRange forwardSpeed;
 	private ContinuousRange reverseSpeed;
     private ContinuousRange turnSpeed;
@@ -106,22 +100,16 @@ public class Robot extends IterativeRobot {
     @Override
     public void teleopPeriodic() {
         Strongback.restart();
+        Drives drive = new Drives(_leftMain, _rightMain);
 
 		//Strongback.logger().warn("Left Speed: " + leftSpeed.read() + "          Right Speed: " + rightSpeed.read());
+
 		double combinedSpeed = forwardSpeed.read() - reverseSpeed.read();
-		int mult = -1;
-		if (combinedSpeed < 0)
-			mult = 1;
-		else
-			mult = -1;
-		drive.arcade(combinedSpeed, mult*turnSpeed.read(), true);
-        //drive.tank(0.2, 0.2);
-		/*
-		_leftMain.set(0.5);
-		_left2.set(0.5);
-		_rightMain.set(0.5);
-		_right2.set(0.5);
-		*/
+		double turn = turnSpeed.read();
+
+		drive.stormDrive(combinedSpeed, turn, true);
+
+
     }
 
     @Override
@@ -137,7 +125,7 @@ public class Robot extends IterativeRobot {
 
     @Override
     public void autonomousPeriodic() {
-
+        Scheduler.getInstance().run();
     }
 
     @Override
