@@ -28,6 +28,7 @@ public class Path1 extends Command {
         File myFile = new File("/home/lvuser/myfile.traj");
         Strongback.logger().warn("File created");
         Trajectory trajectory = Pathfinder.readFromFile(myFile);
+        Strongback.logger().warn("File read");
 
         TankModifier modifier = new TankModifier(trajectory).modify(0.5);
 
